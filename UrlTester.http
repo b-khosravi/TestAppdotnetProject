@@ -1,0 +1,222 @@
+
+@baseUrl = http://localhost:5000/api
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiemFocmFraCIsImp0aSI6ImI3OGE2MjdjLWFiOWItNDY1OC1hYzk5LTIwODQ3NDJmMmEwMiIsIlVzZXJJZCI6IjciLCJGaXJzdE5hbWUiOiJ6YWhyYSIsImV4cCI6MTYwMTQ1ODcxOSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.QR7ubS51wkxH-sr_WH39fB5E7ZnV-WS-fVJBovJ2op4
+# get books
+GET {{baseUrl}}/books/GetBooks HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+# get users
+GET {{baseUrl}}/users/Getusers HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+
+# get shelf
+GET {{baseUrl}}/Shelfs/GetUserById HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+
+# get BooksShelf
+GET {{baseUrl}}/BooksShelfs/GetBooksShelfs HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+# get Books
+GET {{baseUrl}}/Books/GetBooks HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+
+# put books
+PUt {{baseUrl}}/Books/PutBook HTTP/1.1
+Content-Type: application/json
+
+{
+     
+}
+
+
+###
+
+
+# put users
+PUt {{baseUrl}}/User/PutUser HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+###
+
+
+
+# put shelfs
+PUT {{baseUrl}}/Shelfs/PutShelf HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+
+###
+
+
+
+
+
+
+#post books
+
+POST {{baseUrl}}/Books/PostBook HTTP/1.1
+Content-Type: application/json
+{
+    "id":4,
+    "title":"جهان در پوست گردو",
+    "author":"استفان هاوکینگ",
+    "category":"علمی"
+}
+
+
+###
+
+
+
+
+#post users
+POST {{baseUrl}}/Users/PostUser HTTP/1.1
+Content-Type: application/json
+
+{
+
+}
+
+###
+
+
+
+
+#post Shelf
+POST {{baseUrl}}/Shelfs/PostShelf HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    "userid" : 3,
+    "title":"قفسه علمی"
+
+}
+
+###
+
+
+
+
+
+#post BooksShelf
+POST {{baseUrl}}/BooksShelfs/PostBooksShelf HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    "bookid":4,
+    "shelfid":4
+}
+
+###
+
+
+
+
+
+
+#post Authenticate
+
+POST {{baseUrl}}/Authenticate/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"7",
+    "firstname":"zahra",
+    "lastname":"khosravi",
+    "username":"zahrakh",
+    "password":"Aa1234!",
+    "emailAddress":"z.b@c.d"
+}
+
+
+###
+
+
+##
+POST {{baseUrl}}/Authenticate/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"zahrakh",
+    "password":"Aa1234!"
+}
+
+###
+
+
+#
+GET {{baseUrl}}/Authenticate/ShowClaims HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+
+# delete books
+DELETE  {{baseUrl}}/Books/DeleteBook HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+
+
+
+# delete users
+DELETE  {{baseUrl}}/Users/DeleteUser HTTP/1.1
+Content-Type: application/json
+
+{
+  
+    
+}
+###
+
+
+#get memorycache
+
+GET {{baseUrl}}/memorycache HTTP/1.1
+Content-Type: application/json
+{
+    "username":"zahrakh"
+}
+
+###
