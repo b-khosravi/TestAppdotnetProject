@@ -15,6 +15,7 @@ using System.Net;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Hosting;
+using System.Globalization;
 
 
 
@@ -24,13 +25,13 @@ namespace TestApp
 [Route("/Error/")]
 [ApiController]
 
- public class MyExceptionsHandler
+ public class MyExceptionsHandlerMidlleware
  {
     private readonly RequestDelegate _next;
-    private readonly ILogger<MyExceptionsHandler> _logger;
+    private readonly ILogger<MyExceptionsHandlerMidlleware> _logger;
     private readonly IWebHostEnvironment _env;
   
-    public MyExceptionsHandler(RequestDelegate next, ILogger<MyExceptionsHandler> logger, IWebHostEnvironment env)
+    public MyExceptionsHandlerMidlleware(RequestDelegate next, ILogger<MyExceptionsHandlerMidlleware> logger, IWebHostEnvironment env)
     {
         _next = next;
         _logger = logger;

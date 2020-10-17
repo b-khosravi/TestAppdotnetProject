@@ -15,11 +15,11 @@ using Microsoft.AspNetCore.Builder;
 }*/
 namespace TestApp
 {
-    public static class ExceptionsHandlerMiddlewareExtension
+    public static class MyExceptionsHandlerMiddlewareExtension
   {
-     public static IApplicationBuilder UseMyExceptionsHandler(this ApplicationBuilder builder)
+     public static IApplicationBuilder UseMyExceptionsHandler(this IApplicationBuilder builder)
      {
-        return  builder.UseMiddleware<MyExceptionsHandler>();
+        return  builder.UseMiddleware<MyExceptionsHandlerMidlleware>();
 
      }
   }
