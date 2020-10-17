@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
-using TestApp.Controllers;
+//using TestApp.Controllers;
 
-namespace TestApp
+/*namespace TestApp
 {
 
     public static class ExceptionHandlerMiddlewareExtension
@@ -12,4 +12,15 @@ namespace TestApp
     }
 }
 
+}*/
+namespace TestApp
+{
+    public static class ExceptionsHandlerMiddlewareExtension
+  {
+     public static IApplicationBuilder UseMyExceptionsHandler(this ApplicationBuilder builder)
+     {
+        return  builder.UseMiddleware<MyExceptionsHandler>();
+
+     }
+  }
 }
