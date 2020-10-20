@@ -26,7 +26,7 @@ namespace TestApp.Controllers
 
         // GET: api/Books/GetBooks
         [HttpGet]
-        [Authorize(Policy="UserLoginOnly")]
+        [Authorize(Policy="RequireUserRole")]
         public async Task<ActionResult<IEnumerable<Book>>> GetBooks(int pageNumber=1,int pageSize=3)
         {
 
@@ -98,7 +98,7 @@ namespace TestApp.Controllers
 
                 [HttpPost]
 
-        [Authorize(Policy="ReuireUserRole")]
+       [Authorize(Policy = "RequireUserrRole")]
 
         public async Task<ActionResult<Book>> PostBook(Book book)
         {

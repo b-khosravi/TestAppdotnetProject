@@ -1,6 +1,6 @@
 
 @baseUrl = http://localhost:5000/api
-@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiemFocmFraCIsImp0aSI6ImI3OGE2MjdjLWFiOWItNDY1OC1hYzk5LTIwODQ3NDJmMmEwMiIsIlVzZXJJZCI6IjciLCJGaXJzdE5hbWUiOiJ6YWhyYSIsImV4cCI6MTYwMTQ1ODcxOSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.QR7ubS51wkxH-sr_WH39fB5E7ZnV-WS-fVJBovJ2op4
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiemFocmFraCIsImp0aSI6ImY2ZGIyYzk3LWVlNDMtNDZhZS05MzUzLTUzMjNkZDk5MjZlNyIsIlVzZXJJZCI6IjciLCJGaXJzdE5hbWUiOiJ6YWhyYSIsImV4cCI6MTYwMjk3MDI1NiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.UDvFpj2BiZXN9NmGZt-xKaxJtFjarek1lMBT4fqVjV8
 # get books
 GET {{baseUrl}}/books/GetBooks HTTP/1.1
 Content-Type: application/json
@@ -95,12 +95,11 @@ Content-Type: application/json
 POST {{baseUrl}}/Books/PostBook HTTP/1.1
 Content-Type: application/json
 {
-    "id":4,
+    "id":8,
     "title":"جهان در پوست گردو",
     "author":"استفان هاوکینگ",
     "category":"علمی"
 }
-
 
 ###
 

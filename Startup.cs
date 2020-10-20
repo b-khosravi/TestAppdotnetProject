@@ -81,10 +81,12 @@ namespace TestApp
                 };
             });
             //بخش آپشن رو ادد کردم
-            services.AddAuthorization( options =>
-              {
-                 options.AddPolicy("RequireUserRole", 
-                   Policy => Policy.RequireRole("User"));
+            services.AddAuthorization(options =>
+             {
+                  options.AddPolicy("RequireUserRole",
+                   Policy =>Policy.RequireRole("User"));
+               //  options.AddPolicy("RequireUserRole", 
+                //   Policy => Policy.RequireRole("User"));
               });
             services.AddMvc();
 
